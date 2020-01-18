@@ -106,28 +106,6 @@ public class MathComplex {
         return valorA2 == valorA1 && valorB1 == valorB2;
     }
 
-    /**
-     * Este metodo realiza la suma entre dos vectores dados y devuelve un nuevo
-     * vector de complejos. Para sumar dos vectores, se suma cada componente de un
-     * vector con el respectivo componente del otro vector.
-     *
-     * @param v1 vector de complejos.
-     * @param v2 vector de complejos.
-     * @return ComplexNumber[] : el vector de complejos resultante de la suma.
-     * @throws MathComplexException : si la longitud de los vectores es diferente,
-     *                              la suma vectorial no esta definida en los
-     *                              numeros complejos.
-     */
-    public static ComplexNumber[] sumarVectores(ComplexNumber[] v1, ComplexNumber[] v2) throws MathComplexException {
-        if (v1.length != v2.length) {
-            throw new MathComplexException(MathComplexException.LONGITUD_VECTORES_DIFERENTE);
-        }
-        ComplexNumber[] sumaVectores = new ComplexNumber[v1.length];
-        for (int i = 0; i < v1.length; i++) {
-            sumaVectores[i] = add(v1[i], v2[i]);
-        }
-        return sumaVectores;
-    }
 
     
 

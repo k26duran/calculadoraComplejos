@@ -11,7 +11,7 @@ import edu.escuelaing.cnyt.MathComplexNumber.*;
 import edu.escuelaing.cnyt.exceptions.MathComplexException;
 
 /**
- *
+ * En esta clase se realizan las pruebas de los métodos de la calculadora para ver si son correctos o no.
  */
 public class TestMath {
 
