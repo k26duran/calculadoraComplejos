@@ -31,7 +31,7 @@ Un número complejo es un número compuesto por un número **real** y un número
 
 1. Para usar la librería, se debe primero clonar el repositorio con el comando:
 
-> git clone https://github.com/CarlosCL98/ComplexNumbers.git
+> git clone https://github.com/k26duran/calculadoraComplejos.git
 
 1. Después se accede a la dirección donde el repositorio fue clonado y se ejecutan los siguientes comando:
 
