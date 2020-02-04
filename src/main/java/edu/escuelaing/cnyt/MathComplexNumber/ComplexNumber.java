@@ -45,7 +45,7 @@ public class ComplexNumber {
      * @return double : la fase del numero complejo.
      */
     public double phase() {
-        return Math.atan(imaginario / real);
+        return Math.atan2(imaginario, real);
     }
 
     @Override
