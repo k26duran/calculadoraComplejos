@@ -15,7 +15,6 @@ import org.junit.Assert;
 /**
  * Pruebas unitarias para la clase QuantumExperiments.
  *
- * @author Diego Alberto Carvajal Cardenas
  */
 public class QuantumExperimentsTest extends TestCase {
 

@@ -16,7 +16,6 @@ import junit.framework.TestSuite;
 /**
  * Pruebas unitarias para la clase QuantumExperiments.
  *
- * @author Carlos Andres Medina Rivas
  */
 public class QuantumSystemTest extends TestCase {
 
