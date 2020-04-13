@@ -40,7 +40,14 @@ Un número complejo es un número compuesto por un número **real** y un número
 1. El último comando **mvn install** genera un archivo .jar que puede copiar y pegar en su proyecto para poder usar la librería.
 
 ## Pruebas
+
  ![](/img/pruebas.PNG)
+
+## Prueba: Probabilidad de una particula en una posición
+
+ ![](/img/pruebaProbabilidadParticula.PNG)
+
+
 
 ## Autor
 
