@@ -1,7 +1,9 @@
 package edu.escuelaing.cnyt.quantum;
 
+import java.io.IOException;
 import java.util.List;
 
+import edu.escuelaing.cnyt.connection.HttpConnection;
 import edu.escuelaing.cnyt.MathComplexNumber.ComplexNumber;
 import edu.escuelaing.cnyt.MathComplexNumber.MathComplex;
 import edu.escuelaing.cnyt.exceptions.MathComplexException;
@@ -134,5 +136,26 @@ public class QuantumSystem {
         }
         return finalState;
     }
+
+    /**
+     * Este metodo calcular los valores propios de un observable. Para este uso
+     * la interfaz EigenValue del api org.ojalgo. Un valor propio es aquel que
+     * si al multiplicar una matriz por un vector el resultado es el mismo que
+     * multiplicar dicho valor propio por el mismo vector.
+     *
+     * @param m matriz que representa un observable hermitiano
+     * @return ComplexNumber[] : representa una lista con los valores propios
+     * del observable.
+     */
+    public static ComplexNumber[] valoresPropiosDeUnObservable(ComplexNumber[][] m) throws IOException {
+        HttpConnection httpConnection = new HttpConnection();
+        List<Double> response = httpConnection.getResponse(MathComplex.matrizToString(m));
+        ComplexNumber[] valoresPropios = new ComplexNumber[response.size()];
+        for (int i = 0; i < response.size(); i++) {
+            valoresPropios[i] = new ComplexNumber(response.get(i), 0);
+        }
+        return valoresPropios;
+    }
+
 
 }

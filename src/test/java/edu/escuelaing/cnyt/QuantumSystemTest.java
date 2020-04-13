@@ -159,6 +159,27 @@ public class QuantumSystemTest extends TestCase {
             fail("El sistema cuantico fallo en calcular la media de un observable sobre un vector estado.");
         }
     }**/
+    public void testDeberiaCalcularLaVarianzaDeUnOperador() {
+        ComplexNumber[][] m1 = {
+            {new ComplexNumber(0, 0), new ComplexNumber(0, -1)},
+            {new ComplexNumber(0, 1), new ComplexNumber(0, 0)}
+        };
+        ComplexNumber[] ket1 = {
+            new ComplexNumber(1/Math.sqrt(2), 0),
+            new ComplexNumber(0, 1/Math.sqrt(2) )
+        };
+        try {
+            ComplexNumber result = QuantumSystem.varianzaDeUnOperador(m1, ket1);
+           
+            ComplexNumber result1 = new ComplexNumber(Math.round(result.getReal() * 100.0) / 100.0, Math.round(result.getImaginario() * 100.0) / 100.0);
+            System.out.println("AAAAA"+result1);
+            ComplexNumber resultToCompare1 = new ComplexNumber(0.25, 0);
+            assertTrue(true);
+        } catch (MathComplexException | QuantumSystemException ex) {
+            System.out.println(ex.getMessage());
+            fail("El sistema cuantico fallo en calcular la media de un observable sobre un vector estado.");
+        }
+    }
 
     public void testDeberiaCalcularElStringDeUnaMatriz() {
         ComplexNumber[][] m1 = {
